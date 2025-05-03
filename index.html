@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Good Builder</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #1c1c1c;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .gold-text {
+      font-size: 3em;
+      font-weight: bold;
+      background: linear-gradient(90deg, #ffd700, #ffa500, #ffd700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    footer {
+      background-color: #1c1c1c;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .profile-pic-box {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-pic-box input[type="file"] {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .profile-pic-preview {
+      margin-top: 20px;
+      max-width: 200px;
+      height: auto;
+      border-radius: 50%;
+      border: 3px solid #ffd700;
+    }
+
+    .suggestions-box {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .suggestions-box div {
+      margin: 10px;
+      text-align: center;
+      border: 2px solid #ddd;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .suggestions-box img {
+      width: 150px;
+      height: auto;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .suggestions-box img:hover {
+      transform: scale(1.1);
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="gold-text">Good Builder</h1>
+    <p>Your trusted partner in construction and design</p>
+  </header>
+
+  <section>
+    <h2>About Us</h2>
+    <p>Good Builder is a professional construction company with a reputation for quality craftsmanship and excellent customer service. We handle residential and commercial projects with precision and care.</p>
+  </section>
+
+  <!-- Profile picture upload box -->
+  <section>
+    <h2>Upload Your Profile Picture</h2>
+    <div class="profile-pic-box">
+      <label for="profilePic">Choose your profile picture:</label>
+      <input type="file" id="profilePic" accept="image/*" onchange="previewProfilePic(event)" />
+      <img id="profilePicPreview" class="profile-pic-preview" src="" alt="Profile Preview" style="display: none;" />
+    </div>
+  </section>
+
+  <!-- Suggestions Box -->
+  <section>
+    <h2>Suggestions</h2>
+    <div class="suggestions-box">
+      <div>
+        <img src="https://via.placeholder.com/150?text=Toilet" alt="Toilet" />
+        <p>Toilet</p>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/150?text=Houses" alt="Houses" />
+        <p>Houses</p>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/150?text=Latrine" alt="Latrine" />
+        <p>Latrine</p>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/150?text=Tap" alt="Tap" />
+        <p>Tap</p>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/150?text=Building" alt="Building" />
+        <p>Building</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Good Builder. All rights reserved.
+  </footer>
+
+  <script>
+    function previewProfilePic(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = function() {
+        const preview = document.getElementById('profilePicPreview');
+        preview.src = reader.result;
+        preview.style.display = 'block';
+      };
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
+</body>
+</html>
+CONTACT US ON :070998019/0752861750
